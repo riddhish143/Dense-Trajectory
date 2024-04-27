@@ -1,37 +1,63 @@
-# Dense Trajectory 
+**Action Recognition using Dense Trajectory**
 
-1. Dense trajectories are extracted by tracking densely sampled points using optical flow fields. This gives a much denser sampling of trajectories compared to previous methods that tracked sparse interest points.
+---
 
-2. Motion boundary histograms (MBH) are computed along the dense trajectories to encode relative motion between pixels. This descriptor is robust to camera motion and highlights foreground motion.
+### Project Overview:
 
-3. Other descriptors like trajectory shape, HOG for appearance, and HOF for optical flow are also computed along the dense trajectories.
+This project presents a computer vision system for computing video descriptors employing a combination of Histogram of Oriented Gradients (HOG), Histogram of Optical Flow (HOF), and Motion Boundary Histograms (MBH) techniques. The main innovation lies in the extraction and description of dense trajectories from videos, providing a robust representation of motion patterns compared to previous trajectory approaches. Additionally, the MBH descriptor effectively distinguishes relevant foreground motion from background camera motion in videos. The implementation is in Python 3.10.12.
 
-4. The dense trajectory features are encoded using a bag-of-features approach and classified with SVMs.
+Implementation of code is based on the paper *"Dense trajectories and motion boundary descriptors for action recognition"* by Wang et al (2013).
 
-5. The dense trajectories and MBH descriptors achieve state-of-the-art results on four challenging action recognition datasets: KTH, YouTube, Hollywood2, and UCF sports.
+[Link to the paper](#) (Insert Link)
 
-The main novelty is extracting and describing dense trajectories from videos, which provides a more robust representation of motion patterns compared to previous trajectory approaches. The MBH descriptor is also effective at separating relevant foreground motion from background camera motion in videos.
+### Execution Requirements:
 
-## Table of Contents
-- [Project Description](#project-description)
-- [Installation](#installation)
-- [Usage](#usage)
+**To execute this project, follow these steps:**
 
-## Project Description
+1. **Install Dependencies:**
+   - Python (3.10.12)
+   - OpenCV (4.9.0)
+   - NumPy (1.26.4)
+   - Scikit-Learn (1.4.1.post1)
+   - Pandas (2.2.1)
+   - Matplotlib (3.8.3)
+   - Seaborn (0.13.2)
 
-An implementation of the paper ["Dense trajectories and motion boundary descriptors for action recognition" by Wang et al (2013)](https://hal.inria.fr/hal-00803241/document).
+2. **Ensure Hardware Requirements:**
+   - More than 4GB of RAM
+   - At least 30GB of disk space
 
-## Installation
+### Input Parameters:
 
-```pip install matplotlib , scikit-learn , opencv-python , numpy```
+- **Video Path:** Path to the video file for which descriptors need to be computed.
 
-## Usage
+### Usage Example:
 
-* Command to run : ```python3 run.py```
-* if finding difficulities running the code debug the code using below file
-* Check each line of code by running : ```demo.ipynb``` file
+**To run the code, follow these steps:**
 
-## Accessing the Project
+1. Navigate to the `DenseTrajectory` directory using the command: 
+   ```
+   cd DenseTrajectory
+   ```
 
-You can access the project by clicking on the following drive link: [Project Link](https://drive.google.com/drive/folders/139dfr8O6bWTTdhVcwGr3n0kleJ3icO72?usp=drive_link)
-if any issue mail me riddhishmahajan143@gmail.com
+2. Execute the `run.py` file using the command: 
+   ```
+   python3 run.py
+   ```
+
+3. **Note:** Before running `run.py`, ensure `already computed descriptors = False` in the main function to compute your own descriptors based on input videos. The UCF-sport dataset has been used for descriptor computation.
+
+4. If finding difficulties in understanding the code, debug the code using `demo.ipynb` file.
+
+### Output:
+
+The system processes the video and computes descriptors, which are then saved in the `DenseTrajectory/out` directory.
+
+### Note:
+
+- The `train.txt` file should contain paths to training videos along with their corresponding labels for model training.
+- The `test.txt` file should contain paths to testing videos along with their corresponding labels for model evaluation.
+
+---
+
+Feel free to modify and enhance this readme file according to your project's specific needs and preferences.
