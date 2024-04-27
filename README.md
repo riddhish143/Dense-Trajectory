@@ -57,6 +57,7 @@ The system processes the video and computes descriptors, which are then saved in
 
 - The `train.txt` file should contain paths to training videos along with their corresponding labels for model training.
 - The `test.txt` file should contain paths to testing videos along with their corresponding labels for model evaluation.
+- Also you should add `extracted folder` in `data folder` and in that extracted folder all the video on which you want to find descriptors with .avi extension (for ucf sport dataset)must be present to run code 
 
 ---
 
