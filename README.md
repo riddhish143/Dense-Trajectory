@@ -61,3 +61,4 @@ The system processes the video and computes descriptors, which are then saved in
 ---
 
 Feel free to modify and enhance this readme file according to your project's specific needs and preferences.
+You can access the full project by clicking on the following drive link: Project Link if any issue mail me riddhishmahajan143@gmail.com
