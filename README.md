@@ -6,10 +6,6 @@ This project implements a computer vision system for computing video descriptors
 
 The implementation is based on the paper **"Dense trajectories and motion boundary descriptors for action recognition"** by Wang et al (2013), and it is coded in Python 3.10.12.
 
-## Code Implementation on GitHub
-
-For detailed code implementation, please visit the [GitHub repository](https://github.com/riddhish143/Dense-Trajectory).
-
 ## Dataset Preparation
 
 1. Download the dataset from the provided link [UCF Sports Action Dataset](https://www.crcv.ucf.edu/data/UCF_Sports_Action.php) and place it in the appropriate directory within the project.
