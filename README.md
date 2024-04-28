@@ -1,6 +1,4 @@
-Sure, here's a README file template based on the information you provided:
 
----
 
 # Dense Trajectory Computer Vision System
 
